@@ -1,0 +1,22 @@
+// ==UserScript==
+// @name         TEACH
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://teach.engr.oregonstate.edu/teach.php?type=want_auth
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    let inputs = document.getElementsByClassName("LoginInput");
+    let user = inputs[0];
+    user.value = "{{ username }}";
+    let pw = inputs[1];
+    pw.value = "{{ password }}";
+    let buttons = document.getElementsByClassName("LoginSubmit");
+    let button = buttons[0];
+    button.click()
+})();
