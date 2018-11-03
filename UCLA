@@ -1,0 +1,21 @@
+// ==UserScript==
+// @name         UCLA
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://shb.ais.ucla.edu/shibboleth-idp/profile/SAML2/Redirect/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    let login = document.getElementById("logon");
+    login.value = "{{ username }}";
+    let pw = document.getElementById("pass");
+    pw.value = "{{ password }}";
+    let buttons = document.getElementsByClassName("primary-button");
+    let button = buttons[0];
+    button.click()
+})();
