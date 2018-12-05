@@ -18,5 +18,5 @@
     let div = divs[3];
     let nodes = div.childNodes;
     let button = nodes[1];
-    button.click()
+    button.click();
 })();
