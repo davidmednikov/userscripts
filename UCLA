@@ -10,12 +10,11 @@
 
 (function() {
     'use strict';
-
     let login = document.getElementById("logon");
     login.value = "{{ username }}";
     let pw = document.getElementById("pass");
     pw.value = "{{ password }}";
     let buttons = document.getElementsByClassName("primary-button");
     let button = buttons[0];
-    button.click()
+    button.click();
 })();
