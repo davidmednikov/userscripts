@@ -10,7 +10,6 @@
 
 (function() {
     'use strict';
-
     let inputs = document.getElementsByClassName("LoginInput");
     let user = inputs[0];
     user.value = "{{ username }}";
@@ -18,5 +17,5 @@
     pw.value = "{{ password }}";
     let buttons = document.getElementsByClassName("LoginSubmit");
     let button = buttons[0];
-    button.click()
+    button.click();
 })();
